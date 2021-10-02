@@ -1,8 +1,5 @@
 # My problem:
-
-$$
-\max  -x^2
-$$
+<img src="https://gitee.com/image111111/image1/raw/master/%E6%9C%AA%E5%91%BD%E5%90%8D.png"/>
 
 # Simulated-Annealing
 ```python
