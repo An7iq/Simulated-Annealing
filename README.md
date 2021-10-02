@@ -1,12 +1,15 @@
 # Simulated-Annealing
-Use Python to implement simulated annealing algorithm
+```python
+#Use Python to implement simulated annealing algorithm
 import numpy as np
 import matplotlib.pyplot as plt
 
 def fun(x):
     return -np.square(x)
+```
 
 # 1.initialization parameter
+```python
 narvs = 1 # the number of variables
 T0 = 100 # initial temperature
 T = T0 # the temperature will change during the iteration, and the temperature of the first iteration is T0
@@ -16,17 +19,23 @@ alpha = 0.95 # Attenuation coefficient of temperature
 x_ub = 3 # upper bound of x
 x_lb = -3 # lower bound of x
 d = (x_ub - x_lb) / 100
+```
 
 # 2. Random generate an initial solution
+```python
 x0 = np.random.uniform(x_lb, x_ub)
 y0 = fun(x0) # evaluates the function value of the current solution
+```
 
 # 3. Define some intermediate variables to be easy to draw and output the values
+```python
 max_y = y0 # the value of the function corresponding to the best solution found during initialization
 best_x = x0
 MAXY = np.zeros((maxgen,1)) # record the optimal solution found after each outer loop
+```
 
 # 4.Simulated Annealing (SA) process
+```python
 for i in range(maxgen):
     for j in range(Lk):
         # Generate a new solution
@@ -62,3 +71,5 @@ plt.scatter(best_x, max_y,
             color="red", s=50,
             marker="*")
 plt.show()
+```
+
